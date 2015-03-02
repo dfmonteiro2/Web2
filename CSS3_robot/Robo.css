@@ -81,25 +81,296 @@ html[xmlns] .clearfix { display: block; }
 /* ------------  start here --------------- */
 
 
-/* ------------  head --------------- */
-
-.antena {
-	width: 2px;
-	height: 50px;
-	background: black;
+.face {
+	width: 100px;
+	height: 125px;
+	background: red;
+	position: absolute;
+	top:20px;
+	left:300px;
 }
 
-#circle {
-	width: 100px;
-	height: 100px;
-	background: red;
+.eye {
+	width: 55px;
+	height: 55px;
+	background: black;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
 	border-radius: 50px;
+	position: absolute;
+	top:20px;
+	left:20px;
 }
 
-/* ------------  start here --------------- */
+.eye-white {
+	width: 48px;
+	height: 48px;
+	background: white;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	position: absolute;
+	top:23px;
+	left:23px;
+}
+
+.eye-pupil {
+	width: 10px;
+	height: 10px;
+	background: black;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	position: absolute;
+	top:40px;
+	left:42px;
+}
+
+.mustache {
+    position: absolute;
+    width: 100px;
+    height: 90px;
+	top:98px;
+	left:313px;
+}
+.mustache:before,
+.mustache:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 20px;
+    height: 30px;
+    background: black;
+    -moz-border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+.mustache:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+
+.mouth {
+	width: 130px;
+	height: 40px;
+	background: black;
+	position: absolute;
+	top:130px;
+	left:285px;
+}
+
+.teeth {
+	width:18px;
+	height:35px;
+	background:lightgreen;
+    display:inline-block;
+	transition: background-color .75s ;
+}
+
+.teeth:hover { 
+    background-color: black;
+}
+
+.neck {
+	width: 50px;
+	height: 50px;
+	background: black;
+	position: absolute;
+	top:173px;
+	left:325px;
+}
+.torso {
+	width: 350px;
+	height: 200px;
+	background:red;
+	position: absolute;
+	top:226px;
+	left:175px;
+	 -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+ 
+.torso:hover {
+  border-radius: 50%;
+}
+
+.heart {
+    position: absolute;
+    width: 100px;
+    height: 90px;
+	top:280px;
+	left:400px;
+}
+
+.heart:before,
+.heart:after {
+    position: absolute;
+    content: "";
+    left: 20px;
+    top: 0;
+    width: 20px;
+    height: 30px;
+    background: black;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+.heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
 
 
+@-webkit-keyframes heart {
+  25% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  75% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes heart {
+  25% {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  75% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+.heart {
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.heart:hover {
+  -webkit-animation-name: heart;
+  animation-name: heart;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
 
 
+.left-leg {
+	width:70px;
+	height:75px;
+	background:black;
+	position: absolute;
+	top:430px;
+	left:270px;
+}
+
+.right-leg {
+	width:70px;
+	height:75px;
+	background:black;
+	position: absolute;
+	top:430px;
+	left:350px;
+}
+
+.left-arm {
+	width:30px;
+	height:180px;
+	background:black;
+	position: absolute;
+	top:280px;
+	left:140px;
+}
+
+.right-arm {
+	width:30px;
+	height:180px;
+	background:black;
+	position: absolute;
+	top:280px;
+	left:530px;
+}
+
+.left-hand {
+  width: 0px;
+  height: 0px;
+  border-right: 30px solid transparent;
+  border-top: 30px solid red;
+  border-left: 30px solid red;
+  border-bottom: 30px solid red;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  transform: rotate(90deg);
+  position: absolute;
+  top:440px;
+  left:125px;
+  
+}
+
+.right-hand {
+  width: 0px;
+  height: 0px;
+  border-right: 30px solid transparent;
+  border-top: 30px solid red;
+  border-left: 30px solid red;
+  border-bottom: 30px solid red;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  transform: rotate(90deg);
+  position: absolute;
+  top:440px;
+  left:515px;
+}
