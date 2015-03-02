@@ -79,3 +79,14 @@ html[xmlns] .clearfix { display: block; }
 
 
 /* ------------  start here --------------- */
+
+
+.antena {
+	width: 100px;
+	height: 100px;
+	background: red;
+}
+
+
+
+
