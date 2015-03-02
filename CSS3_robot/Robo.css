@@ -81,11 +81,24 @@ html[xmlns] .clearfix { display: block; }
 /* ------------  start here --------------- */
 
 
+/* ------------  head --------------- */
+
 .antena {
+	width: 2px;
+	height: 50px;
+	background: black;
+}
+
+#circle {
 	width: 100px;
 	height: 100px;
 	background: red;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
 }
+
+/* ------------  start here --------------- */
 
 
 
