@@ -1,0 +1,28 @@
+<html><body>
+<script src='http://cykod.github.io/Logoish/logoish.js'></script>
+<script>
+Logoish.init();
+
+speed(0);
+
+function square(size) {
+  forward(size);
+  rotate(72);
+  forward(size);
+  rotate(72);
+  forward(size);
+  rotate(72);
+  forward(size);
+  rotate(72);
+  forward(size);
+  rotate(72);
+}
+
+for(var x = 2; x < 2500; x++) {
+  moveTo(400,350);
+  rotate(1);
+  square(x);
+}
+
+</script>
+</body></html>
