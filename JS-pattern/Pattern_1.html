@@ -8,17 +8,17 @@ speed(0);
 lineWidth(1)
 
 function segment(size) {
-  rotate(30);
+  rotate(1);
   forward(size);
-  rotate(-40);
+  rotate(-500);
   forward(size);
-  rotate(-40);
+  rotate(-75);
   forward(size);
   rotate(20);
 }
 
-for(var x = 0;x < 300; x++){ 
-  segment(x/3);  
+for(var x = 0;x < 50000; x++){ 
+  segment(x/.75);  
 }
 
 </script>
