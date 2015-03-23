@@ -1,10 +1,6 @@
 body, html { padding:0px; margin:0px; }
 
-.buttons {
-	position:absolute;
-	z-index:2;
-
-}
+.buttons { position:absolute; z-index:1; }
 	
 
 .buttons button {
