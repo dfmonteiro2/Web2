@@ -10,7 +10,7 @@ $("#button-save").on("click",function() {
 $("#button-replay").on("click",function() {
  speed (300)
  replay();
- speed (0)  // why 2 different speeds? //
+ speed (0)
 });
 
 $("#button-eraser").on("click",function() {
@@ -20,33 +20,13 @@ $("#button-eraser").on("click",function() {
 	lineColor("white");
 });
 
-$("#button-color-tan").on("click",function() {
-	$(this).addClass("selected");
-	tool = "brush-tan";
-	lineWidth(15);
-	lineColor("tan");
+$(".color").on("click",function(e) {
+  var col = $(this).data("color");
+  $(".color").removeClass("selected")
+  $(this).addClass("selected");
+  lineColor(col);
 });
 
-$("#button-color-blue").on("click",function() {
-	$(this).addClass("selected");
-	tool = "brush-blue";
-	lineWidth(15);
-	lineColor("blue");
-});
-
-$("#button-color-green").on("click",function() {
-	$(this).addClass("selected");
-	tool = "brush-green";
-	lineWidth(15);
-	lineColor("green");
-});
-
-$("#button-color-brown").on("click",function() {
-	$(this).addClass("selected");
-	tool = "brush-brown";
-	lineWidth(15);
-	lineColor("brown");
-});
 
 $("#button-triangle").on("click",function() {
   $(".tool.selected").removeClass("selected");
@@ -64,15 +44,15 @@ $("#button-shape").on("click",function() {
  lineColor(color);
 });
 
-
-/* $("#button-crab").on("click",function() {
-  $(".tool.selected").removeClass("selected");
-  $(this).addClass("selected");
-  tool = "crab";
- lineWidth(width);
- lineColor(color);
+$("#button-plus").on("click",function() {
+	$(this).addClass("selected");
+	lineWidth(100);
 });
-*/
+
+$("#button-minus").on("click",function() {
+	$(this).addClass("selected");
+	lineWidth(10);
+});
 
 function triangle() {
   angle(0);
@@ -98,45 +78,6 @@ function shape() {
   rotate(72);
 }
 
-/* function crab() {
-
-box-shadow:
-    0 0 0 1em red,
-    0 1em 0 1em red,
-    -2.5em 1.5em 0 .5em red,
-    2.5em 1.5em 0 .5em red,
-    -3em -3em 0 0 red,
-    3em -3em 0 0 red,
-    -2em -2em 0 0 red,
-    2em -2em 0 0 red,
-    -3em -1em 0 0 red,
-    -2em -1em 0 0 red,
-    2em -1em 0 0 red,
-    3em -1em 0 0 red,
-    -4em 0 0 0 red,
-    -3em 0 0 0 red,
-    3em 0 0 0 red,
-    4em 0 0 0 red,
-    -5em 1em 0 0 red,
-    -4em 1em 0 0 red,
-    4em 1em 0 0 red,
-    5em 1em 0 0 red,
-    -5em 2em 0 0 red,
-    5em 2em 0 0 red,
-    -5em 3em 0 0 red,
-    -3em 3em 0 0 red,
-    3em 3em 0 0 red,
-    5em 3em 0 0 red,
-    -2em 4em 0 0 red,
-    -1em 4em 0 0 red,
-    1em 4em 0 0 red,
-    2em 4em 0 0 red;
-
-    background: red;
-    width: 1em;
-    height: 1em;
-    overflow: hidden;
-*/
 
 var drawing = false;
 var tool = "pen";
@@ -150,9 +91,7 @@ $(document).on("mousedown",function(e) {
   if(tool == "pen" || tool == "eraser") { 
     drawing = true;
   } else if(tool == "triangle") {
-    triangle();
-  } else if(tool == "brush-tan")
-    drawing = true;
+	  triangle();}
 });
 
 $(document).on("mousedown",function(e) {
@@ -161,27 +100,6 @@ $(document).on("mousedown",function(e) {
   if(tool == "shape")
     shape();
 });
-	
-$(document).on("mousedown",function(e) {
-  e.preventDefault();
-  moveTo(e.pageX,e.pageY);
-  if(tool == "brush-blue")
-    drawing = true;
-});
-	  
-$(document).on("mousedown",function(e) {
-  e.preventDefault();
-  moveTo(e.pageX,e.pageY);
-  if(tool == "brush-green")
-    drawing = true;
-});
-  
-$(document).on("mousedown",function(e) {
-  e.preventDefault();
-  moveTo(e.pageX,e.pageY);
-  if(tool == "brush-brown")
-    drawing = true;
-});  
   
 $(document).on("mousemove",function(e) {
   e.preventDefault();

@@ -1,0 +1,17 @@
+h1{
+  color:white;
+}
+h3{
+  color:blue;
+}
+
+div{
+  list-style:none;
+}
+
+.person{
+  float:left;
+  margin:10px;
+  max-width:600px;
+  background-color:pink;
+}
