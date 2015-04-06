@@ -1,0 +1,236 @@
+
+
+/* Meyer Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Center Content */
+
+.centered { 
+  margin:0 auto;
+  width:960px;
+}
+
+/* Clearfix */
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix { display: inline-block; }
+html[xmlns] .clearfix { display: block; }
+* html .clearfix { height: 1%; }
+
+
+
+/* ------------  start here --------------- */
+
+
+
+body {
+	position: relative;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+
+/* ---Nav--- */
+
+#site-header{
+	height:100px;
+	top:0;
+	left:0;
+	width:100%;
+	background-color:rgba(255,255,255,.95);
+	z-index:100;
+}
+
+#stickyNav{
+	height:120px;
+	width:100%;
+}
+
+#header-center {
+	width:745px;
+	margin:0 auto;
+}
+
+#name {
+	margin-top: 50px;
+	margin-bottom: 25px;
+	font-family:Open Sans; Helvetica; Sans-serif;
+	font-weight:600;
+	font-size: 30px;
+	display: inline-block;
+	float:left;
+}
+
+#subText{
+	text-transform: uppercase;
+	letter-spacing:4.5px;
+	font-size: 11px;
+}
+
+header a {
+	color:black;
+}
+
+nav{
+	float:right;
+}
+
+li{
+	font-family:Open Sans; Helvetica; Sans-serif;
+	text-transform: uppercase;
+	margin-top:60px;
+	letter-spacing: 1px;
+	display: inline-block;
+	position: relative;
+	
+}
+
+li a {
+	padding: 3px 30px 3px 30px;
+	font-weight:600px;
+	font-size: 12px;
+	margin-top: 60px;
+	margin-bottom: 25px;
+	
+}
+
+a{
+	text-decoration:none;
+}
+
+/* ---main--- */
+
+#main {
+	max-width:600px;
+	margin: 0 auto 125px auto;
+}
+
+#body-text{
+	font-family:Open Sans; Helvetica; Sans-serif;
+	font-size:12px;
+	line-height: 1.5em;
+	font-weight:400;
+	float:center;
+	text-align:left;
+	width:100%;
+	height:auto;
+}
+
+/* ---footer--- */
+
+
+footer{
+	background-color:black;
+	text-align:center;
+		
+}
+
+#footer-text{
+	font-family:Open Sans; Helvetica; Sans-serif;
+	font-weight:400;
+	color:white;
+	line-height: 1.75em;
+	font-size: 13px;
+	padding-bottom:10px;
+}
+
+hr{
+	width:50px;
+}
+
+footer a {
+	color:white;
+	text-decoration:none;
+}
+
+
+#copyright {
+	font-family:Open Sans; Helvetica; Sans-serif;
+	font-weight:400;
+	color:white;
+	line-height: 1.5em;
+	font-size: 11px;
+	font-color:255,255,255;
+	padding-top:10px; 
+	padding-bottom:30px;
+}
+
+/* ---breaks--- */
+
+@media screen and (max-width:500px) { 
+	#article1, #article2{
+		float:none;
+		width:95%;}
+	#wiki, #martha {
+		float:none;
+		text-align:center;}
+	#nav li {
+		display:block;}
+	#nav .bullet {display:none;}
+}
+  
+  
+  
+  
+  
