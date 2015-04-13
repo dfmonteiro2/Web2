@@ -61,9 +61,9 @@
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
-.N {color: green;}
-.H {color: #480000;}
-.C {color: green;}
+.N {color: #27581f;}
+.H {color: #634646;}
+.C {color: #98afd0;}
 
 /* Section - Title */
 /**************************/
@@ -174,3 +174,11 @@
 @media screen and (max-width: 479px) {
   #parallax .block {padding: 30px 15px; width:290px;}
 }
+
+/* New */
+
+.disclaimer{
+	color:gray; 
+}
+
+
