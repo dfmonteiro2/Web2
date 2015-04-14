@@ -1,0 +1,71 @@
+.image1 {
+	background:none;
+	height:500px;
+	width:100%;
+    background-image: url("images/HWA_Forest.v2.jpg");
+	background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+	background-size:100%;
+}
+
+div#title {
+	background-color:none;
+	text-align:center;
+	font-family:'Oswald', sans-serif; 
+	font-size:70px; 
+	letter-spacing:10px; 
+	text-align:center; 
+	color:white; 
+	font-weight:400; 
+	text-transform:uppercase; 
+	z-index:10; 
+	opacity:.8;
+	padding-top:25%;
+}
+
+.container2 {
+	background:green;
+	margin-bottom:25px;
+	width:100%;
+	position:relative;
+	padding-bottom:25px;
+}
+
+p#paragraph {
+	margin-bottom:20px;
+	text-align:justify;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size:100%; 
+	color:black; 
+	font-weight:300; 
+	padding-left:25px;
+	padding-right:25px;
+}
+
+div#box1 {
+	background:orange;
+	position:absolute;
+	padding:;
+	width:100%;
+	background-color:none;
+}
+
+
+.container3 {
+	background:blue;
+	height:200px;
+	width:100%;
+}
+
+.container4 {
+	background:yellow;
+	height:200px;
+	width:100%;
+}
+
+.container5 {
+	background:pink;
+	height:200px;
+	width:100%;
+}
