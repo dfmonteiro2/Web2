@@ -11,6 +11,42 @@
 .margin-bot-10 {padding-bottom:10px;}
 
 
+nav{
+	float:right;
+}
+
+li{
+	font-family:'Source Sans Pro'; Helvetica; Sans-serif;
+	color:black;
+	text-transform: uppercase;
+	margin-top:60px;
+	letter-spacing: 1px;
+	display: inline-block;
+	position: relative;
+	z-index:100;
+}
+
+li a {
+	padding: 3px 30px 3px 30px;
+	font-weight:600px;
+	font-size: 12px;
+	margin-top: 60px;
+	margin-bottom: 25px;
+}
+
+a{
+	text-decoration:none;
+}
+
+
+li a:hover {
+	background-color: black;
+	color:white;
+	font-weight:600;
+	padding: 1px 30px 1px 30px;
+	
+}
+
 #parallax h1 {
 	font-family:'Oswald', sans-serif; 
 	font-size:24px; 
@@ -42,6 +78,28 @@
 	text-align:center; 
 	color:white;
 }
+#parallax h4 {
+	font-family:'Oswald', sans-serif; 
+	font-size:24px; 
+	font-weight:400; 
+	text-transform: uppercase; 
+	text-align:right; 
+	color:#3a871b; 
+	padding:15px; 
+	margin:0;
+	letter-spacing:1px;
+}
+#parallax h5 {
+	font-family:'Oswald', sans-serif; 
+	font-size:24px; 
+	font-weight:400; 
+	text-transform: uppercase; 
+	text-align:left; 
+	color:#634646; 
+	padding:15px; 
+	margin:0;
+	letter-spacing:1px;
+}
 #parallax p {
 	font-family:'Source Sans Pro', sans-serif; 
 	font-weight:400; 
@@ -60,9 +118,9 @@
 }
 
 
-.N {color: #27581f;}
+.N {color: #3a871b;}
 .H {color: #634646;}
-.C {color: #98afd0;}
+.C {color: #27581f;}
 
 
 #parallax .title {
@@ -71,6 +129,25 @@
 	margin:0 auto; 
 	text-align:center;
 }
+
+.parallax-one .arrived {
+  transform: translate(0px,0);
+  opacity:1;
+}
+
+/*
+#page2{
+	position:absolute;
+	font-family:'Source Sans Pro', sans-serif; 
+	font-size:50px;
+    vertical-align: bottom; 
+	z-index:100;
+}*/
+
+
+
+
+
 #parallax .title h1 {
 	font-size:35px; 
 	letter-spacing:8px;
@@ -87,13 +164,6 @@ blockquote {
     padding: 13px;
     margin: 0 13px 13px 0;
 }
-.pquote2 {
-    float: right;
-    width: 500px;
-    background: none;
-    padding: 13px;
-    margin: 0 13px 13px 0;
-}
 .pquote3 {
     float: left;
     width: 500px;
@@ -103,13 +173,69 @@ blockquote {
 }
 
 
-#parallax .block {
+#parallax .block1 {
 	background: white; 
 	padding: 60px; 
 	width:820px; 
 	margin:0 auto; 
 	text-align:justify;
 }
+.pquote1 {
+  padding:50px 20px;
+  position:relative;
+  transition: opacity 2s ease, transform 2s ease;
+  transform: translate(-50px,0);
+  opacity:0.5;
+}
+.pquote1.arrived {
+  transform: translate(0px,0);
+  opacity:1;
+}
+
+#parallax .block2 {
+	background: white; 
+	padding: 60px; 
+	width:820px; 
+	margin:0 auto; 
+	text-align:justify;
+}
+.pquote2 {
+	clear:both;
+	padding:0 100px 0 50px;
+	transition: opacity 2s ease, transform 2s ease;
+	opacity:0.5;
+}
+.pquote2 .arrived {
+  transform: translate(0px,0);
+  opacity:1;
+}
+
+
+#parallax .block3 {
+	background: white; 
+	padding: 60px; 
+	width:820px; 
+	margin:0 auto; 
+	text-align:justify;
+}
+.pquote3 {
+  padding:50px 20px;
+  position:relative;
+  transition: opacity 2s ease, transform 2s ease;
+  transform: translate(-50px,0);
+  opacity:0.5;
+}
+.pquote3 .arrived {
+  transform: translate(0px,0);
+  opacity:1;
+}
+
+.page {
+  position:relative;
+  overflow:hidden;
+}
+
+
 #parallax .block-gray {
 	background: #f2f2f2;
 	padding: 60px;
@@ -180,6 +306,15 @@ blockquote {
 	color:gray; 
 }
 
+.centerVideo{
+	position: absolute;
+	margin-top:150px;
+	margin-bottom:150px;
+	margin: auto
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
 
 @media screen and (max-width: 959px) and (min-width: 768px) {
   #parallax .block {padding: 40px; width:620px;}

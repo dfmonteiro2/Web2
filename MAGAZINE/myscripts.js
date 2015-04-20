@@ -1,5 +1,5 @@
-$('.js-meat').click(function () {
-  $(this).text(function(i, text){
-    return text === "MENU" ? "CLOSE" : "MENU";
-  })
+$(".scrolling").scrollFlight();
+
+$("h1").on("arrived",function(e) {
+  $(this).addClass("on-page");
 });

@@ -3,10 +3,20 @@
 	<!DOCTYPE html>
 	<head> 
 		<link rel="stylesheet" type="text/css" href="style.css"/>
-		<script src='https://code.jquery.com/jquery-2.1.3.js'></script>
-		<script src='http://cykod.github.io/ScrollFlight/scroll_flight.js'></script>
-</head>
+	</head>
+	
+	
+<nav>
+	<ul>
+		<li><a href="http://ak-hdl.buzzfed.com/static/2014-07/18/8/enhanced/webdr08/anigif_enhanced-buzz-8915-1405685252-4.gif">home</a></li>
+		<li><a href="http://s3-ec.buzzfed.com/static/2013-11/enhanced/webdr07/21/11/anigif_enhanced-buzz-12659-1385050810-20.gif">explore</a></li>
+		<li><a href="http://www.drodd.com/images8/funny-gif/funny-gif28.gif">find</a></li>
+	</ul>
+</nav> 
 
+
+
+<body>
 <div id="parallax">
   
 <section>
@@ -24,12 +34,12 @@
 </section>
 
 <section>
-  <div class="block">
+  <div class="block1">
     <p><span class="first-character N">N</span>native to Asia, the hemlock woolly adelgid (Adelges tsugae) is a small, aphid-like insect that threatens the health and sustainability of eastern hemlock (Tsuga canadensis) and Carolina hemlock (Tsuga caroliniana) in the Eastern United States. Hemlock woolly adelgid was first reported in the Eastern United States in 1951 near Richmond, Virginia. By 2005, it was established in portions of 16 States from Maine to Georgia, where infestations covered about half of the range of hemlock. Areas of extensive tree mortality and decline are found throughout the infested region, but the impact has been most severe in some areas of Virginia, New Jersey, Pennsylvania, and Connecticut.</p>
 
-<aside class="pquote1">
+<aside>
 	<blockquote>
-		<h1>By 2005, it was established in portions of 16 States from Maine to Georgia, where infestations covered about half of the range of hemlock.</h1>
+		<h4 class="pquote1">By 2005, it was established in portions of 16 States from Maine to Georgia, where infestations covered about half of the range of hemlock.</h4>
 	</blockquote>
 </aside>
 	
@@ -41,21 +51,21 @@
 
 <section>
   <div class="parallax-two">
-    <h2 class="subTitle">history</h2>
+    <h2 class="scrolling">history</h2>
   </div>
 </section>
 
 <section>
-  <div class="block">
+  <div class="block2">
     <p><span class="first-character H">H</span>emlock woolly adelgid is tiny, less than 1/16-inch (1.5-mm) long, and varies from dark reddish-brown to purplish-black in color. As it matures, it produces a covering of wool-like wax fi laments to protect itself and its eggs from natural enemies and prevent them from drying out. This "wool" (ovisac) is most conspicuous when the adelgid is mature and laying eggs. Ovisacs can be readily observed from late fall to early summer on the underside of the outermost branch tips of hemlock trees. </p>
 
 <p>The hemlock woolly adelgid parthenogenetic (all individuals are female with asexual reproduction) and has six stages of development: the egg, four nymphal instars, and the adult. The adelgid completes two generations a year on hemlock. The winter generation, the sistens, develops from early summer to midspring of the following year (June-March). The spring generation, the progrediens, develops from spring to early summer (March-June). The generations overlap in mid to late spring.</p>
 
 <p>The hemlock woolly adelgid is unusual in that it enters a period of dormancy during the hot summer months. The nymphs during this time period have a tiny halo of woolly wax surrounding their bodies. The adelgids begin to feed once cooler temperatures prevail, usually in October, and continue throughout the winter months.</p>
 
-<aside class="pquote2">
+<aside class="pquote2" "quote arrived">
 	<blockquote>
-		<h1>Ovisacs can be readily observed from late fall to early summer on the underside of the outermost branch tips of hemlock trees.</h1>
+		<h5>Ovisacs can be readily observed from late fall to early summer on the underside of the outermost branch tips of hemlock trees.</h5>
 	</blockquote>
 </aside>
 
@@ -72,14 +82,14 @@
 </section>
 
 <section>
-  <div class="block">
+  <div class="block3">
     <p><span class="first-character C">C</span>ultural, regulatory, chemical, and biological controls can reduce the hemlock woolly adelgid's rate of spread and protect individual trees. Actions such as moving bird feeders away from hemlocks and removing isolated infested trees from a woodlot can help prevent further infestations. State quarantines help prevent movement of infested materials to noninfested areas.</p>
 
 <p>Chemical control options, such as foliar sprays using horticultural oils and insecticidal soaps, are effective when trees can be saturated to ensure that the insecticide comes in contact with the adelgid. Several systemic insecticides have also proven effective on large trees when applied to the soil around the base of the tree or injected directly into the stem. Chemical control is limited to individual tree treatments in readily accessible, nonenvironmentally sensitive areas; it is not feasible in forests, particularly when large numbers of trees are infested. Chemical treatments offer a short-term solution, and applications may need to be repeated.</p>
 
 <aside class="pquote3">
 	<blockquote>
-		<h1>Actions such as moving bird feeders away from hemlocks and removing isolated infested trees from a woodlot can help prevent further infestations.</h1>
+		<h4>Actions such as moving bird feeders away from hemlocks and removing isolated infested trees from a woodlot can help prevent further infestations.</h4>
 	</blockquote>
 </aside>
 
@@ -89,6 +99,29 @@
   </div>
 </section>
 </div>
+
+
+<div class="centerVideo">
+<iframe class="video" width="420" height="315"
+src="http://www.youtube.com/embed/yQP0Tv43mxg">
+</iframe>
+</div>
+
+</body>
+
+
+<script src='https://code.jquery.com/jquery-2.1.3.js'></script>
+<script src='http://cykod.github.io/ScrollFlight/scroll_flight.js'></script>
+
+<script>
+
+$(".scroller").scrollFlight();
+
+$(".title").on("arrived",function() {
+  $(this).addClass("arrived");
+});
+
+</script>
 
 
 
