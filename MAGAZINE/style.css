@@ -1,18 +1,16 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald:300,400,700);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
 
-/* Override UGG site */
+
 #main {width: 100%; padding:0;}
 .content-asset p {margin:0 auto;}
 .breadcrumb {display:none;}
 
-/* Helpers */
-/**************************/
+
 .margin-top-10 {padding-top:10px;}
 .margin-bot-10 {padding-bottom:10px;}
 
-/* Typography */
-/**************************/
+
 #parallax h1 {
 	font-family:'Oswald', sans-serif; 
 	font-size:24px; 
@@ -61,28 +59,50 @@
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
+
 .N {color: #27581f;}
 .H {color: #634646;}
 .C {color: #98afd0;}
 
-/* Section - Title */
-/**************************/
+
 #parallax .title {
 	background: white; 
 	padding: 60px; 
 	margin:0 auto; 
 	text-align:center;
 }
-	
 #parallax .title h1 {
 	font-size:35px; 
 	letter-spacing:8px;
 }
 
 
+blockquote {
+    margin: 0; /* gets rid of the default blockquote margin */
+}
+.pquote1 {
+    float: left;
+    width: 500px;
+    background: none;
+    padding: 13px;
+    margin: 0 13px 13px 0;
+}
+.pquote2 {
+    float: right;
+    width: 500px;
+    background: none;
+    padding: 13px;
+    margin: 0 13px 13px 0;
+}
+.pquote3 {
+    float: left;
+    width: 500px;
+    background: none;
+    padding: 13px;
+    margin: 0 13px 13px 0;
+}
 
-/* Section - Block */
-/**************************/
+
 #parallax .block {
 	background: white; 
 	padding: 60px; 
@@ -104,8 +124,7 @@
 	opacity: 0.70;
 }
 
-/* Section - Parallax */
-/**************************/
+
 #parallax .parallax-one {
 	padding-top: 200px; 
 	padding-bottom: 200px; 
@@ -149,20 +168,22 @@
 	background-position: center center;
 }
 
-/* Extras */
-/**************************/
+
 #parallax .line-break {
 	border-bottom:1px solid black; 
 	width: 150px; 
 	margin:0 auto;
 }
 
-/* Media Queries */
-/**************************/
+
+.disclaimer{
+	color:gray; 
+}
+
+
 @media screen and (max-width: 959px) and (min-width: 768px) {
   #parallax .block {padding: 40px; width:620px;}
 }
-
 @media screen and (max-width: 767px) {
   #parallax .block {padding: 30px; width:420px;}
   #parallax h2 {font-size:30px;}
@@ -175,10 +196,5 @@
   #parallax .block {padding: 30px 15px; width:290px;}
 }
 
-/* New */
-
-.disclaimer{
-	color:gray; 
-}
 
 
