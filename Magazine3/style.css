@@ -1,0 +1,335 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+
+
+#main {width: 100%; padding:0;}
+.content-asset p {margin:0 auto;}
+.breadcrumb {display:none;}
+
+
+.margin-top-10 {padding-top:10px;}
+.margin-bot-10 {padding-bottom:10px;}
+
+
+nav{
+	float:right;
+}
+
+li{
+	font-family:'Source Sans Pro'; Helvetica; Sans-serif;
+	color:black;
+	text-transform: uppercase;
+	margin-top:60px;
+	letter-spacing: 1px;
+	display: inline-block;
+	position: relative;
+	z-index:100;
+}
+
+li a {
+	padding: 3px 30px 3px 30px;
+	font-weight:600px;
+	font-size: 12px;
+	margin-top: 60px;
+	margin-bottom: 25px;
+}
+
+a{
+	text-decoration:none;
+}
+
+
+li a:hover {
+	background-color: black;
+	color:white;
+	font-weight:600;
+	padding: 1px 30px 1px 30px;
+	
+}
+
+#parallax h1 {
+	font-family:'Oswald', sans-serif; 
+	font-size:24px; 
+	font-weight:400; 
+	text-transform: uppercase; 
+	text-align:left; 
+	color:black; 
+	padding:0; 
+	margin:0;
+}
+#parallax h2 {
+	font-family:'Oswald', sans-serif; 
+	font-size:70px; 
+	letter-spacing:10px; 
+	text-align:center; 
+	color:white; 
+	font-weight:400; 
+	text-transform:uppercase; 
+	z-index:10; 
+	opacity:.8;
+}
+#parallax h3 {
+	font-family:'Oswald', sans-serif; 
+	font-size:14px; 
+	line-height:0; 
+	font-weight:400; 
+	letter-spacing:8px; 
+	text-transform: uppercase; 
+	text-align:center; 
+	color:white;
+}
+#parallax h4 {
+	font-family:'Oswald', sans-serif; 
+	font-size:24px; 
+	font-weight:400; 
+	text-transform: uppercase; 
+	text-align:right; 
+	color:#3a871b; 
+	padding:15px; 
+	margin:0;
+	letter-spacing:1px;
+}
+#parallax h5 {
+	font-family:'Oswald', sans-serif; 
+	font-size:24px; 
+	font-weight:400; 
+	text-transform: uppercase; 
+	text-align:left; 
+	color:#634646; 
+	padding:15px; 
+	margin:0;
+	letter-spacing:1px;
+}
+#parallax p {
+	font-family:'Source Sans Pro', sans-serif; 
+	font-weight:400; 
+	font-size:14px; 
+	line-height:24px;
+}
+.first-character {
+	font-weight:400; 
+	float: left; 
+	font-size: 84px; 
+	line-height: 64px; 
+	padding-top: 4px; 
+	padding-right: 8px; 
+	padding-left: 3px; 
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.N {color: #3a871b;}
+.H {color: #634646;}
+.C {color: #27581f;}
+
+
+#parallax .title {
+	background: white; 
+	padding: 60px; 
+	margin:0 auto; 
+	text-align:center;
+}
+
+.parallax-one .arrived {
+  transform: translate(0px,0);
+  opacity:1;
+}
+
+/*
+#page2{
+	position:absolute;
+	font-family:'Source Sans Pro', sans-serif; 
+	font-size:50px;
+    vertical-align: bottom; 
+	z-index:100;
+}*/
+
+
+
+
+
+#parallax .title h1 {
+	font-size:35px; 
+	letter-spacing:8px;
+}
+
+
+blockquote {
+    margin: 0; /* gets rid of the default blockquote margin */
+}
+.pquote1 {
+    float: left;
+    width: 500px;
+    background: none;
+    padding: 13px;
+    margin: 0 13px 13px 0;
+}
+.pquote3 {
+    float: left;
+    width: 500px;
+    background: none;
+    padding: 13px;
+    margin: 0 13px 13px 0;
+}
+
+
+#parallax .block1 {
+	background: white; 
+	padding: 60px; 
+	width:820px; 
+	margin:0 auto; 
+	text-align:justify;
+}
+.pquote1 {
+  padding:50px 20px;
+  position:relative;
+  transition: opacity 2s ease, transform 2s ease;
+  transform: translate(-50px,0);
+  opacity:0.5;
+}
+.pquote1.arrived {
+  transform: translate(0px,0);
+  opacity:1;
+}
+
+#parallax .block2 {
+	background: white; 
+	padding: 60px; 
+	width:820px; 
+	margin:0 auto; 
+	text-align:justify;
+}
+.pquote2 {
+	clear:both;
+	padding:0 100px 0 50px;
+	transition: opacity 2s ease, transform 2s ease;
+	opacity:0.5;
+}
+.pquote2 .arrived {
+  transform: translate(0px,0);
+  opacity:1;
+}
+
+
+#parallax .block3 {
+	background: white; 
+	padding: 60px; 
+	width:820px; 
+	margin:0 auto; 
+	text-align:justify;
+}
+.pquote3 {
+  padding:50px 20px;
+  position:relative;
+  transition: opacity 2s ease, transform 2s ease;
+  transform: translate(-50px,0);
+  opacity:0.5;
+}
+.pquote3 .arrived {
+  transform: translate(0px,0);
+  opacity:1;
+}
+
+.page {
+  position:relative;
+  overflow:hidden;
+}
+
+
+#parallax .block-gray {
+	background: #f2f2f2;
+	padding: 60px;
+}
+#parallax .section-overlay-mask {
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%; 
+	background-color: black; 
+	opacity: 0.70;
+}
+
+
+#parallax .parallax-one {
+	padding-top: 200px; 
+	padding-bottom: 200px; 
+	overflow: hidden; 
+	position: relative; 
+	width: 100%; 
+	background-image: url("images/HemlockWoollyAdelgid2.jpg"); 
+	background-attachment: fixed; 
+	background-size: cover; 
+	-moz-background-size: cover; 
+	-webkit-background-size: cover; 
+	background-repeat: no-repeat; 
+	background-position: top center;
+}
+#parallax .parallax-two {
+	padding-top: 200px; 
+	padding-bottom: 200px; 
+	overflow: hidden; 
+	position: relative; 
+	width: 100%; 
+	background-image: url(images/WollyAdlegidForest.jpg); 
+	background-attachment: fixed; 
+	background-size: cover; 
+	-moz-background-size: cover; 
+	-webkit-background-size: cover; 
+	background-repeat: no-repeat; 
+	background-position: center center;
+}
+#parallax .parallax-three {
+	padding-top: 200px; 
+	padding-bottom: 200px; 
+	overflow: hidden; 
+	position: relative; 
+	width: 100%; 
+	background-image: url(images/HWA-killedForest.v2.jpg); 
+	background-attachment: fixed; 
+	background-size: cover; 
+	-moz-background-size: cover; 
+	-webkit-background-size: cover; 
+	background-repeat: no-repeat; 
+	background-position: center center;
+}
+
+
+#parallax .line-break {
+	border-bottom:1px solid black; 
+	width: 150px; 
+	margin:0 auto;
+}
+
+
+.disclaimer{
+	color:gray; 
+}
+
+.centerVideo{
+	position: absolute;
+	margin-top:150px;
+	margin-bottom:150px;
+	margin: auto
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 959px) and (min-width: 768px) {
+  #parallax .block {padding: 40px; width:620px;}
+}
+@media screen and (max-width: 767px) {
+  #parallax .block {padding: 30px; width:420px;}
+  #parallax h2 {font-size:30px;}
+  #parallax .block {padding: 30px;}
+  #parallax .parallax-one, 
+  #parallax .parallax-two, 
+  #parallax .parallax-three {padding-top:100px; padding-bottom:100px;}
+}
+@media screen and (max-width: 479px) {
+  #parallax .block {padding: 30px 15px; width:290px;}
+}
+
+
+
