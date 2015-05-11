@@ -58,6 +58,7 @@
   </div>
 </div>
 
+<div>
 <ul class='collection'>
  
 
@@ -70,93 +71,107 @@
 
 <script>
 
-/*Shows modal*/
+/Shows Modal/
 function showModal(item) {
-   $(".modal").empty();
-   
-   var $h1 = $("<h1>").text(item.Name);
-   var $img = $("<img>").attr("src",item.Type + "/" + item.Image);
-   var $p = $("<p class='Color'>").html("Color:" + item.Color + "<br/> Height:" + item.Height);   
-
-   $(".modal").append($h1,$img,$p);
-   
-   $(".overlay").show();
-   $(".modal").show();
-}
-
-
-/*Hide modal*/
-function hideModal() {
-  $(".overlay").hide();
-  $(".modal").hide();
-}
-
-/*targets color*/
-function addItem(item) {
-  var $li = $("<div>").addClass("item").addClass(item.Type);
-
-/*targets color*/
-  $li.attr("data-category",item.Type);
-
-/*adds name, description color*/
-  var $h2 = $("<h2 class='name'>").text(item.Name);
+  $(".modal").empty();
+  
+ 
+  var $img = $("<img>").attr("src",item.Image);
   var $p = $("<p class='description'>").text(item.Description);
 
-  $li.append($h2).append($p);
+  $(".modal").append($img,$p);
+  
+  $(".overlay").show();
+  $(".modal").show();
 
-  $li.on("click",function(e) {
-      showModal(item);
-  });
-
-  $(".collection").append($li);
-};
-
-/*targets content*/
-function addItems(data) {
-  for(var i=0;i<data.length;i++) {
-    addItem(data[i]);
-  }
 }
 
+/Hides Modal/
+function hideModal() {
+ $(".overlay").hide();
+ $(".modal").hide();
+}
+
+
+
+/Adds an item for that attribute/
+function addItem(item) {
+ var $li = $("<li>").addClass("item");
+
+ $li.attr("data-category",item.Type);
+
+
+ 
+ var $img = $("<img>").attr("src",item.Image);
+
+
+ 
+ var $hover = $("<div class='hoverstate'>")
+ 
+ var $h2 = $("<h2 class='name'>").text(item.Name);
+ //var $p = $("<p class='description'>").text(item.Description);
+ 
+ $hover.append($h2)
+
+ $li.append($img).append($hover);
+
+ $li.on("click",function(e) {
+     showModal(item);
+ });
+
+ $(".collection").append($li);
+};
+
+
+
+/*Does this for every item*/
+function addItems(data) {
+ for(var i=0;i<data.length;i++) {
+   addItem(data[i]);
+ }
+}
 
 function callback(data) { 
 
-  addItems(data);
+ addItems(data);
 
-  var $container = $('.collection');
-  $container.packery({
-    itemSelector: '.item',
-    gutter: 10
-  });
+/packery stuff/
+ var $container = $('.collection');
+ $container.packery({
+   itemSelector: '.item',
+	 gutter: 2
+ });
 
-  var myCollection = $(".item").collection({
-    filters: { 
-      "title": "h2",
-      "category": "[data-category]"
-    },
+ var myCollection = $(".item").collection({
+   filters: { 
+     "title": "h2",
+     "category": "[data-category]"
+   },
 
-    update: function() { 
-      $container.packery(); 
-      setTimeout(function() { $container.packery()},600);
-    },
-    hide: function($elem) { $elem.hide(); },
-    show: function($elem) { $elem.fadeIn(500); },
-  });
+   update: function() { 
+     $container.packery(); 
+     setTimeout(function() { $container.packery()},600);
+   },
+   hide: function($elem) { $elem.hide(); },
+   show: function($elem) { $elem.fadeIn(500); },
+ });
+ 
+ /when click, unclick all other categories/
 
-  $(".category").on("click",function(e) {
-      var category = $(this).data("category");
-      $("#filter-bar button").removeClass("selected");
-      $(this).addClass("selected");
-      myCollection.filtered("category",category);
-  });
+ $(".category").on("click",function(e) {
+     var category = $(this).data("category");
+     $("#filter-bar button").removeClass("selected");
+     $(this).addClass("selected");
+     myCollection.filtered("category",category);
+ });
 
-  $("#search").on("change keyup",function(e) {
-      myCollection.filtered("title", $(this).val());
-  });
+ $("#search").on("change keyup",function(e) {
+     myCollection.filtered("title", $(this).val());
+ });
 
-  $(".overlay").on("click",function(e) {
-      hideModal();
-  });
+ $(".overlay").on("click",function(e) {
+     hideModal();
+ });
 
 }
 
