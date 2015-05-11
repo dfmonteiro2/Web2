@@ -200,11 +200,13 @@ blockquote {
 	text-align:justify;
 }
 .pquote2 {
-	clear:both;
 	padding:0 100px 0 50px;
-	transition: opacity 2s ease, transform 2s ease;
-	opacity:0.5;
-}
+    position:relative;
+    transition: opacity 2s ease, transform 2s ease;
+    transform: translate(-50px,0);
+    opacity:0.5;
+}	
+	
 .pquote2 .arrived {
   transform: translate(0px,0);
   opacity:1;
@@ -315,6 +317,47 @@ blockquote {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+
+.iframe-wrapper {
+  width:100%;
+  overflow:hidden;
+  position:absolute;;
+  height: 100vh;
+  top:0;
+  left:0;
+}
+.iframe-wrapper iframe {
+  position: absolute;
+  top:-10%;
+  left:-20%;
+  width:140%;
+  height:120%;
+}
+.iframe-cover {
+  width:100%;
+  height:100vh;
+  background-color:rgba(255,255,255,1);
+  transition: background-color 4s ease 1s;
+  z-index:2;
+}
+.iframe-cover.appeared {
+  background-color:rgba(255,255,255,0.0);
+}
+
+.t1 {
+	font-family:'Oswald', sans-serif; 
+	font-size:50px; 
+	letter-spacing:10px; 
+	text-align:center; 
+	color:white; 
+	font-weight:400; 
+	text-transform:uppercase; 
+	z-index:10; 
+	opacity:.8;
+}
+
+
 
 @media screen and (max-width: 959px) and (min-width: 768px) {
   #parallax .block {padding: 40px; width:620px;}

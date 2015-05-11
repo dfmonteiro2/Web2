@@ -12,12 +12,49 @@
 </head>
 <body>
 
-<div id='filter-bar-wrapper'>
-  <div id='filter-bar'>
-    <input type='text' id='search' placeholder='search'/>
-    <button data-category=""      class='category selected' id="all-button">All</button>
-    <button data-category="Annuals"  class='category'>Annuals</button>
-    <button data-category="Perennials"   class='category'>Perennials</button>
+<div id="menu">
+	<div id='filter-bar-wrapper'>
+	  <div id='filter-bar'>
+    <svg width="75" height="20" id="menu-btn" onclick="this.setAttribute('class',(this.getAttribute('class')=='open')? '': 'open');">
+        <defs>
+            <mask id="mask2" x="0" y="0" width="75" height="20">
+                <!--M -->
+                <path fill="#ffffff" d="M15.541,19V7.78c0-0.555,0-2.964,0-4.737h-0L10.256,19H7.744L2.459,3.07H2.407
+	c0,1.746,0,4.155,0,4.71V19H0V0h3.636L9,16.063h0L14.389,0H18v19H15.541z" />
+                
+				<!-- E -->
+                <!-- <rect x="22" y="0" fill="#222" width="3" height="19" />-->
+                <rect x="22" y="0" fill="#fff" width="15" height="3" />
+                <rect x="22" y="8" fill="#fff" width="15" height="3" />
+                <rect x="22" y="16" fill="#fff" width="15" height="3" />
+                
+				<!-- N -->
+                <path fill="#ffffff" d="M53.114,0h2.474v19H52.72L43.114,3.652h-0.053V19h-2.474V0h3.027l9.446,15.349h0.053V0z" />
+                
+				<!-- U -->
+                <path fill="#ffffff" d="M75,0v12.014C75,15.804,72.558,19,67.327,19C62.204,19,60,15.804,60,12.349V0h2.575v11.652
+	c0,4.022,2.522,5.131,4.832,5.131c2.363,0,5.018-1.058,5.018-5.08V0H75z" />
+            </mask>
+        </defs>
+        <linearGradient id="grad1" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="60" y2="0">
+            <stop offset="0" style="stop-color:#ffffff">
+                <animate attributeName="offset" values="#ffffff" dur="3s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="1" style="stop-color:#ffffff">
+                <animate attributeName="offset" values="#ffffff" dur="3s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="0" style="stop-color:#ffffff">
+                <animate attributeName="offset" values="#ffffff" dur="3s" repeatCount="indefinite" />
+            </stop>
+        </linearGradient>
+        <rect x="0" y="0" width="75" height="100" fill="url(#grad1)" style="stroke: none; mask: url(#mask2)"></rect>
+    </svg>
+    <ul id="menu-list">
+        <li><button class='menu-item category selected' data-category="">All</button></li>
+        <li><button class='menu-item category selected' data-category="Annuals">Annuals</button></li>
+        <li><button class='menu-item category selected' data-category="Perennials" class='category'>Perennials</button></li>
+    </ul>
+</div>
   </div>
 </div>
 
@@ -39,7 +76,7 @@ function showModal(item) {
    
    var $h1 = $("<h1>").text(item.Name);
    var $img = $("<img>").attr("src",item.Type + "/" + item.Image);
-   var $p = $("<p class='description'>").text(item.Description.toLowerCase());
+   var $p = $("<p class='Color'>").html("Color:" + item.Color + "<br/> Height:" + item.Height);   
 
    $(".modal").append($h1,$img,$p);
    
